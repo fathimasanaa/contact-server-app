@@ -1,8 +1,8 @@
-// import json -server
+//  import json server
 
 const jsonServer=require('json-server')
 
-// create ajson-server application
+// create a json-servr application
 
 const server=jsonServer.create()
 
@@ -10,21 +10,22 @@ const server=jsonServer.create()
 
 const router=jsonServer.router('db.json')
 
-// return a middle ware used by json-server
+// return a middle ware used by json-sever
 
 const middleware=jsonServer.defaults()
 
-// setup port number for server app
+// set up port number for server app
 
 const port=process.env.port||3000
 
-// use middleware and router in server app
+// use middleware and reuter in server app
 
 server.use(middleware)
 server.use(router)
 
-// to listen the app in port
+// To listen the app in port
 
 server.listen(port,()=>{
-    console.log('contact server app started at port',port);
+    
+    console.log('contact sever app started at port',port);
 })
